@@ -4,15 +4,26 @@ public class _00_1D_Array_Methods {
 	//1. Complete the method so that it returns the sum of all
 	//   of the integers in the array being passed in
 	public static int sumIntArray(int[] values) {
-
-		return 0;
+		int sum = 0;
+		 for(int i : values) {
+			 int number = i;
+			 sum = sum + number;
+		 }
+		return sum;
 	}
 	
 	//2. Complete the method so that it returns the average of all
 	//   of the integers in the array being passed in
 	public static double averageIntArray(int[] values) {
-				
-		return 0;
+		double list = 0;
+		double sum = 0;
+		for(double i : values) {
+			double number = i;
+			sum = sum + number;
+			list++;
+		}
+		double average = sum/list;
+		return average;
 	}
 	
 	
@@ -20,6 +31,12 @@ public class _00_1D_Array_Methods {
 	//   array contains the value specified by the second parameter.
 	//   It should otherwise return false.
 	public static boolean containsIntValue(int[] array, int value) {
+	for(int i = 0; i<array.length; i++) {
+		
+		if(array[i]==value) {
+			return true;
+		}
+	}
 	
 		return false;
 	}
@@ -28,7 +45,11 @@ public class _00_1D_Array_Methods {
 	//   first instance that the specified value occurs in the array.
 	//   If the array does not contain the specified value, it should return -1.
 	public static int getIndex(int[] arr, int value) {
-		
-		return 0;
+		for(int i = 0; i < arr.length; i++) {
+			if(arr[i]==value) {
+				return i;
+			}
+		}
+		return -1;
 	}
 }
